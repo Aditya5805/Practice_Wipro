@@ -1,0 +1,19 @@
+{
+  "name": "day-23-nodejs-basics",
+  "version": "1.0.0",
+  "description": "Day 23 — Introduction to Node.js & Basics: 3 Challenges covering Node fundamentals, npm, and CLI apps",
+  "main": "banner.js",
+  "scripts": {
+    "start": "node banner.js",
+    "hello": "node hello-node.js",
+    "greet": "node greet.js World"
+  },
+  "keywords": ["nodejs", "npm", "cli", "chalk", "figlet", "moment"],
+  "author": "Day-23 Assignment",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.7.0",
+    "moment": "^2.30.1"
+  }
+}
