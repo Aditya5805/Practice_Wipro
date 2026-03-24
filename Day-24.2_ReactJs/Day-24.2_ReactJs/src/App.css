@@ -1,0 +1,182 @@
+/* ============================================
+   App — Layout & Page Styles
+   ============================================ */
+
+.bv-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Navbar ── */
+.bv-navbar {
+  background: rgba(245, 239, 226, 0.95) !important;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0 !important;
+}
+
+.bv-navbar .container-xl {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+
+.bv-navbar__brand {
+  font-family: var(--font-display) !important;
+  font-size: 1.4rem !important;
+  font-weight: 900 !important;
+  color: var(--ink) !important;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.bv-navbar__logo {
+  font-size: 1.3rem;
+}
+
+.bv-navbar__accent {
+  color: var(--leather);
+}
+
+.bv-nav-link {
+  font-size: 0.83rem !important;
+  color: var(--text-muted) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.03em;
+  transition: color var(--transition) !important;
+}
+
+.bv-nav-link:hover {
+  color: var(--ink) !important;
+}
+
+.bv-navbar__shelf-btn {
+  background: var(--leather) !important;
+  border-color: var(--leather) !important;
+  color: #fff !important;
+  font-size: 0.78rem !important;
+  padding: 5px 16px !important;
+  border-radius: 20px !important;
+  font-family: var(--font-body) !important;
+}
+
+.bv-navbar__shelf-btn:hover {
+  background: var(--leather-dark) !important;
+  transform: translateY(-1px);
+}
+
+/* ── Hero ── */
+.bv-hero {
+  background: var(--cream-dark);
+  border-bottom: 1px solid var(--border);
+  padding: 60px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bv-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 138, 46, 0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.bv-hero__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+
+.bv-hero__headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.08;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.bv-hero__headline em {
+  color: var(--leather);
+  font-style: italic;
+}
+
+.bv-hero__sub {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+.bv-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bv-badge {
+  background: var(--parchment) !important;
+  color: var(--ink-soft) !important;
+  border: 1px solid var(--border) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 400 !important;
+  font-size: 0.7rem !important;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+}
+
+/* ── Decorative Cluster ── */
+.bv-hero__deco {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.bv-hero__deco-book {
+  position: absolute;
+  font-size: 2.8rem;
+  filter: drop-shadow(0 6px 12px rgba(26,18,8,0.12));
+  animation: fadeUp 0.5s ease both;
+  animation-delay: calc(var(--i) * 0.08s + 0.2s);
+}
+
+.bv-hero__deco-book:nth-child(1) { top: 0;     left: 50%;  transform: translateX(-50%) rotate(-5deg); }
+.bv-hero__deco-book:nth-child(2) { top: 30px;  left: 0;    transform: rotate(7deg); }
+.bv-hero__deco-book:nth-child(3) { top: 30px;  right: 0;   transform: rotate(-6deg); }
+.bv-hero__deco-book:nth-child(4) { top: 90px;  left: 20px; transform: rotate(4deg); }
+.bv-hero__deco-book:nth-child(5) { top: 90px;  right: 20px;transform: rotate(-4deg); }
+.bv-hero__deco-book:nth-child(6) { bottom: 0;  left: 50%;  transform: translateX(-50%) rotate(8deg); }
+
+/* ── Main ── */
+.bv-main {
+  flex: 1;
+  padding: 48px 0;
+}
+
+/* ── Footer ── */
+.bv-footer {
+  background: var(--cream-dark);
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+}
+
+.bv-footer__text {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+}

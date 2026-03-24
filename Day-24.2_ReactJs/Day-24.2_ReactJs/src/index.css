@@ -1,0 +1,92 @@
+/* =====================================================
+   BookVerse Day 11 — Global Styles
+   Theme: Warm antiquarian library — cream, amber, leather
+   ===================================================== */
+
+:root {
+  --cream:        #f5efe2;
+  --cream-dark:   #ede3d0;
+  --parchment:    #e8d9be;
+  --leather:      #8b5e3c;
+  --leather-dark: #6b4429;
+  --amber:        #c98a2e;
+  --amber-light:  #e6aa4e;
+  --ink:          #1a1208;
+  --ink-soft:     #3d2e1a;
+  --text-body:    #4a3b28;
+  --text-muted:   #8a7560;
+  --border:       #d4c4a0;
+  --border-light: #e8dcc8;
+  --shadow-sm:    0 2px 8px rgba(26,18,8,0.10);
+  --shadow-md:    0 6px 24px rgba(26,18,8,0.15);
+  --shadow-lg:    0 12px 40px rgba(26,18,8,0.22);
+  --radius:       6px;
+  --radius-lg:    12px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Outfit', system-ui, sans-serif;
+  --transition:   0.24s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cream);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.65;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Override Bootstrap to match our theme ── */
+.card {
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  background: #fff !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.btn-primary {
+  background-color: var(--leather) !important;
+  border-color: var(--leather) !important;
+  font-family: var(--font-body) !important;
+}
+.btn-primary:hover {
+  background-color: var(--leather-dark) !important;
+  border-color: var(--leather-dark) !important;
+}
+
+.btn-outline-secondary {
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-body) !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--amber); }
+
+::selection { background: var(--amber-light); color: var(--ink); }
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
