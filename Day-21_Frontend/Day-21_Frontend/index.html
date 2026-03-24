@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fetch API Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Fetch<em>API</em></span>
+      </div>
+      <p class="header-sub">JavaScript Fetch API — Week 4 · Day 3</p>
+    </div>
+  </header>
+
+  <main class="main-grid">
+
+    <!-- ══════════════════════════════
+         TASK 1 — Employee Directory
+    ══════════════════════════════ -->
+    <section class="task-section" id="task1">
+      <div class="task-label">Task 01</div>
+      <h2 class="task-title">Employee Directory</h2>
+      <p class="task-desc">Fetches all employee records from the REST API endpoint and logs them to the browser console. The table below also renders the retrieved data.</p>
+
+      <div class="action-row">
+        <button class="btn btn--primary" id="fetchEmployeesBtn" onclick="fetchEmployees()">
+          <span class="btn-icon">⚡</span> Fetch Employees
+        </button>
+        <span class="console-hint">Open DevTools Console (F12) to see raw JSON logs</span>
+      </div>
+
+      <!-- Status bar -->
+      <div class="status-bar" id="empStatus"></div>
+
+      <!-- Employee Table -->
+      <div class="table-wrap" id="empTableWrap" style="display:none">
+        <table class="data-table" id="empTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Salary</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody id="empTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         TASK 2 — Random User Card
+    ══════════════════════════════ -->
+    <section class="task-section" id="task2">
+      <div class="task-label">Task 02</div>
+      <h2 class="task-title">Random User Generator</h2>
+      <p class="task-desc">On each button click, a Fetch API request is made to the Random User API. The user's profile picture, name, and email are displayed below.</p>
+
+      <div class="action-row">
+        <button class="btn btn--accent" id="fetchUserBtn" onclick="fetchRandomUser()">
+          <span class="btn-icon">🎲</span> Get Random User
+        </button>
+      </div>
+
+      <!-- Status -->
+      <div class="status-bar" id="userStatus"></div>
+
+      <!-- User Card -->
+      <div class="user-card-wrap" id="userCardWrap" style="display:none">
+        <div class="user-card">
+          <div class="user-card__img-wrap">
+            <img id="userImg" src="" alt="Profile Picture" class="user-card__img"/>
+            <div class="user-card__img-ring"></div>
+          </div>
+          <div class="user-card__body">
+            <div class="user-card__country" id="userCountry"></div>
+            <h3 class="user-card__name" id="userName"></h3>
+            <a class="user-card__email" id="userEmail"></a>
+            <div class="user-card__meta">
+              <div class="meta-chip" id="userGender"></div>
+              <div class="meta-chip" id="userAge"></div>
+              <div class="meta-chip" id="userPhone"></div>
+            </div>
+            <div class="user-card__location" id="userLocation"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CONSOLE MOCK PANEL -->
+  <div class="console-panel" id="consolePanel">
+    <div class="console-panel__header">
+      <span class="console-dot red"></span>
+      <span class="console-dot yellow"></span>
+      <span class="console-dot green"></span>
+      <span class="console-title">console.log output</span>
+      <button class="console-clear" onclick="clearConsole()">clear</button>
+    </div>
+    <div class="console-panel__body" id="consoleBody">
+      <span class="console-empty">// Logs will appear here after fetching data...</span>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <span>Fetch API Explorer &nbsp;·&nbsp; JavaScript Fetch API Tasks &nbsp;·&nbsp; Week 4 Day 3</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
