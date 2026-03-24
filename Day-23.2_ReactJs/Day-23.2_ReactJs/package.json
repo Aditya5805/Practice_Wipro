@@ -1,0 +1,15 @@
+{
+  "name": "day-23-nodejs-core-modules",
+  "version": "1.0.0",
+  "description": "Day 23 — Node.js Core Modules: Challenges 4, 5, 6 covering fs, http, and events modules",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "fs": "node fs-demo.js",
+    "events": "node events-demo.js",
+    "server": "node server.js"
+  },
+  "keywords": ["nodejs", "fs", "http", "events", "EventEmitter", "core-modules"],
+  "author": "Day-23 Assignment",
+  "license": "ISC"
+}
