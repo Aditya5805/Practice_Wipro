@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spring Flowers Academy</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg sfa-navbar sticky-top">
+    <div class="container-fluid px-3 px-md-5">
+
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="showPage('welcome')">
+        <span class="logo-icon">🌸</span>
+        <div class="logo-text">
+          <span class="school-name">Spring Flowers</span>
+          <span class="school-sub">Academy</span>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler sfa-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1 py-2 py-lg-0">
+          <li class="nav-item">
+            <a class="nav-link sfa-link active" href="#" onclick="showPage('welcome')">
+              <i class="bi bi-house-fill me-1"></i>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sfa-link" href="#" onclick="showPage('about')">
+              <i class="bi bi-info-circle-fill me-1"></i>About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sfa-link" href="#" onclick="showPage('profile')">
+              <i class="bi bi-person-fill me-1"></i>Student Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sfa-link sfa-link--highlight" href="#" onclick="showPage('timetable')">
+              <i class="bi bi-calendar-week-fill me-1"></i>TimeTable
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sfa-link" href="#" onclick="showPage('contact')">
+              <i class="bi bi-envelope-fill me-1"></i>Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== WELCOME PAGE ===== -->
+  <section id="welcomePage" class="page-section welcome-section">
+    <div class="welcome-bg-decor"></div>
+    <div class="container h-100">
+      <div class="row align-items-center min-vh-content">
+        <div class="col-lg-6 col-md-8 welcome-content" data-animate>
+          <span class="welcome-tag">Welcome to</span>
+          <h1 class="welcome-title">Spring Flowers<br/><em>Academy</em></h1>
+          <p class="welcome-desc">Nurturing young minds and blooming futures. A place where every student grows with knowledge, creativity, and care.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <button class="btn sfa-btn-primary" onclick="showPage('profile')">
+              <i class="bi bi-person-badge-fill me-2"></i>Student Profile
+            </button>
+            <button class="btn sfa-btn-outline" onclick="showPage('timetable')">
+              <i class="bi bi-calendar3 me-2"></i>View TimeTable
+            </button>
+          </div>
+          <!-- Quick Stats -->
+          <div class="d-flex flex-wrap gap-4 mt-5">
+            <div class="stat-pill"><span class="stat-num">1200+</span><span class="stat-label">Students</span></div>
+            <div class="stat-pill"><span class="stat-num">80+</span><span class="stat-label">Teachers</span></div>
+            <div class="stat-pill"><span class="stat-num">25+</span><span class="stat-label">Years</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-flex justify-content-center">
+          <div class="welcome-illustration">
+            <div class="illus-circle illus-c1">🌸</div>
+            <div class="illus-circle illus-c2">📚</div>
+            <div class="illus-circle illus-c3">🎓</div>
+            <div class="illus-circle illus-c4">✏️</div>
+            <div class="illus-main">🏫</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STUDENT PROFILE PAGE ===== -->
+  <section id="profilePage" class="page-section d-none">
+    <div class="container py-5">
+      <h2 class="section-heading text-center mb-4">Student Profile</h2>
+
+      <div class="row justify-content-center">
+        <!-- LEFT: Avatar Card -->
+        <div class="col-lg-3 col-md-4 mb-4">
+          <div class="profile-avatar-card text-center h-100">
+            <div class="avatar-wrap mx-auto mb-3">
+              <span class="avatar-emoji">👩‍🎓</span>
+              <span class="avatar-badge">Active</span>
+            </div>
+            <h5 class="student-name">Priya Sharma</h5>
+            <p class="student-cls mb-3">Class X — Section A</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <span class="badge sfa-badge">Science</span>
+              <span class="badge sfa-badge">Maths</span>
+              <span class="badge sfa-badge">Arts</span>
+            </div>
+            <hr class="my-3"/>
+            <button class="btn sfa-btn-outline w-100" onclick="showPage('timetable')">
+              <i class="bi bi-calendar-week me-1"></i>My TimeTable
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Info Table -->
+        <div class="col-lg-7 col-md-8 mb-4">
+          <div class="profile-info-card h-100">
+            <h5 class="profile-info-title mb-4"><i class="bi bi-person-lines-fill me-2"></i>Student Information</h5>
+            <div class="row g-3">
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Student ID</span><span class="info-val">SFA-2024-1087</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Full Name</span><span class="info-val">Priya Sharma</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Date of Birth</span><span class="info-val">12 March 2009</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Gender</span><span class="info-val">Female</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Class</span><span class="info-val">Class X — Section A</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Roll Number</span><span class="info-val">23</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Parent / Guardian</span><span class="info-val">Ramesh Sharma</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Contact</span><span class="info-val">+91 98765 43210</span></div></div>
+              <div class="col-12"><div class="info-box"><span class="info-lbl">Address</span><span class="info-val">45, Green Park Colony, New Delhi — 110016</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">Admission Year</span><span class="info-val">2018</span></div></div>
+              <div class="col-sm-6"><div class="info-box"><span class="info-lbl">House</span><span class="info-val">🌸 Rose House</span></div></div>
+            </div>
+            <div class="mt-4">
+              <button class="btn sfa-btn-outline" onclick="showPage('welcome')">
+                <i class="bi bi-arrow-left me-1"></i>Back to Home
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMETABLE PAGE ===== -->
+  <section id="timetablePage" class="page-section d-none">
+    <div class="container py-5">
+      <h2 class="section-heading text-center mb-2">Weekly TimeTable</h2>
+      <p class="text-center text-muted mb-5" style="font-family:'Nunito',sans-serif;">Class X — Section A &nbsp;|&nbsp; Academic Year 2024–25</p>
+
+      <!-- Day Filter Pills (Bootstrap nav-pills) -->
+      <div class="d-flex justify-content-center mb-4 flex-wrap gap-2" id="dayFilter">
+        <button class="btn sfa-day-pill active" onclick="filterDay('all', this)">All Days</button>
+        <button class="btn sfa-day-pill" onclick="filterDay('Mon', this)">Mon</button>
+        <button class="btn sfa-day-pill" onclick="filterDay('Tue', this)">Tue</button>
+        <button class="btn sfa-day-pill" onclick="filterDay('Wed', this)">Wed</button>
+        <button class="btn sfa-day-pill" onclick="filterDay('Thu', this)">Thu</button>
+        <button class="btn sfa-day-pill" onclick="filterDay('Fri', this)">Fri</button>
+      </div>
+
+      <!-- Timetable: Bootstrap responsive table -->
+      <div class="table-responsive shadow-sm rounded-4 overflow-hidden">
+        <table class="table sfa-table mb-0 align-middle text-center">
+          <thead>
+            <tr>
+              <th class="period-col">Period</th>
+              <th class="time-col">Time</th>
+              <th data-day="Mon">Monday</th>
+              <th data-day="Tue">Tuesday</th>
+              <th data-day="Wed">Wednesday</th>
+              <th data-day="Thu">Thursday</th>
+              <th data-day="Fri">Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="period-num fw-bold">1</td>
+              <td class="time-slot">8:00 – 8:45</td>
+              <td data-day="Mon"><span class="subj-pill math">Mathematics</span></td>
+              <td data-day="Tue"><span class="subj-pill english">English</span></td>
+              <td data-day="Wed"><span class="subj-pill science">Science</span></td>
+              <td data-day="Thu"><span class="subj-pill hindi">Hindi</span></td>
+              <td data-day="Fri"><span class="subj-pill math">Mathematics</span></td>
+            </tr>
+            <tr>
+              <td class="period-num fw-bold">2</td>
+              <td class="time-slot">8:45 – 9:30</td>
+              <td data-day="Mon"><span class="subj-pill science">Science</span></td>
+              <td data-day="Tue"><span class="subj-pill math">Mathematics</span></td>
+              <td data-day="Wed"><span class="subj-pill english">English</span></td>
+              <td data-day="Thu"><span class="subj-pill math">Mathematics</span></td>
+              <td data-day="Fri"><span class="subj-pill history">History</span></td>
+            </tr>
+            <tr class="break-row">
+              <td colspan="7"><i class="bi bi-cup-hot-fill me-2"></i>Short Break &nbsp;(9:30 – 9:45)</td>
+            </tr>
+            <tr>
+              <td class="period-num fw-bold">3</td>
+              <td class="time-slot">9:45 – 10:30</td>
+              <td data-day="Mon"><span class="subj-pill hindi">Hindi</span></td>
+              <td data-day="Tue"><span class="subj-pill history">History</span></td>
+              <td data-day="Wed"><span class="subj-pill math">Mathematics</span></td>
+              <td data-day="Thu"><span class="subj-pill english">English</span></td>
+              <td data-day="Fri"><span class="subj-pill science">Science</span></td>
+            </tr>
+            <tr>
+              <td class="period-num fw-bold">4</td>
+              <td class="time-slot">10:30 – 11:15</td>
+              <td data-day="Mon"><span class="subj-pill english">English</span></td>
+              <td data-day="Tue"><span class="subj-pill science">Science</span></td>
+              <td data-day="Wed"><span class="subj-pill geo">Geography</span></td>
+              <td data-day="Thu"><span class="subj-pill geo">Geography</span></td>
+              <td data-day="Fri"><span class="subj-pill hindi">Hindi</span></td>
+            </tr>
+            <tr class="break-row lunch">
+              <td colspan="7"><i class="bi bi-egg-fried me-2"></i>Lunch Break &nbsp;(11:15 – 12:00)</td>
+            </tr>
+            <tr>
+              <td class="period-num fw-bold">5</td>
+              <td class="time-slot">12:00 – 12:45</td>
+              <td data-day="Mon"><span class="subj-pill geo">Geography</span></td>
+              <td data-day="Tue"><span class="subj-pill hindi">Hindi</span></td>
+              <td data-day="Wed"><span class="subj-pill history">History</span></td>
+              <td data-day="Thu"><span class="subj-pill science">Science</span></td>
+              <td data-day="Fri"><span class="subj-pill english">English</span></td>
+            </tr>
+            <tr>
+              <td class="period-num fw-bold">6</td>
+              <td class="time-slot">12:45 – 1:30</td>
+              <td data-day="Mon"><span class="subj-pill art">Art & Craft</span></td>
+              <td data-day="Tue"><span class="subj-pill pe">P.E.</span></td>
+              <td data-day="Wed"><span class="subj-pill art">Art & Craft</span></td>
+              <td data-day="Thu"><span class="subj-pill pe">P.E.</span></td>
+              <td data-day="Fri"><span class="subj-pill comp">Computer</span></td>
+            </tr>
+            <tr>
+              <td class="period-num fw-bold">7</td>
+              <td class="time-slot">1:30 – 2:15</td>
+              <td data-day="Mon"><span class="subj-pill comp">Computer</span></td>
+              <td data-day="Tue"><span class="subj-pill art">Art & Craft</span></td>
+              <td data-day="Wed"><span class="subj-pill pe">P.E.</span></td>
+              <td data-day="Thu"><span class="subj-pill comp">Computer</span></td>
+              <td data-day="Fri"><span class="subj-pill free">Free Period</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Legend -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+        <span class="subj-pill math">Mathematics</span>
+        <span class="subj-pill science">Science</span>
+        <span class="subj-pill english">English</span>
+        <span class="subj-pill hindi">Hindi</span>
+        <span class="subj-pill history">History</span>
+        <span class="subj-pill geo">Geography</span>
+        <span class="subj-pill art">Art & Craft</span>
+        <span class="subj-pill pe">P.E.</span>
+        <span class="subj-pill comp">Computer</span>
+        <span class="subj-pill free">Free Period</span>
+      </div>
+
+      <div class="text-center mt-4">
+        <button class="btn sfa-btn-outline" onclick="showPage('welcome')">
+          <i class="bi bi-arrow-left me-1"></i>Back to Home
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT PAGE ===== -->
+  <section id="aboutPage" class="page-section d-none">
+    <div class="container py-5">
+      <h2 class="section-heading text-center mb-5">About Our School</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="about-card text-center p-4">
+            <div class="about-icon">🌸</div>
+            <h5>Our Vision</h5>
+            <p>To cultivate a learning environment where every child blossoms into a confident, compassionate, and capable individual.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="about-card text-center p-4">
+            <div class="about-icon">📚</div>
+            <h5>Our Mission</h5>
+            <p>Delivering holistic education through innovative teaching, strong values, and a nurturing community since 1999.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="about-card text-center p-4">
+            <div class="about-icon">🏆</div>
+            <h5>Our Achievements</h5>
+            <p>Consistently ranked among the top schools in Delhi, with 100% board pass rate for the past 10 years.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn sfa-btn-outline" onclick="showPage('welcome')"><i class="bi bi-arrow-left me-1"></i>Back to Home</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT PAGE ===== -->
+  <section id="contactPage" class="page-section d-none">
+    <div class="container py-5">
+      <h2 class="section-heading text-center mb-5">Contact Us</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-5">
+          <div class="contact-card p-4">
+            <div class="contact-item"><i class="bi bi-geo-alt-fill"></i><span>45, Flower Street, Green Park, New Delhi — 110016</span></div>
+            <div class="contact-item"><i class="bi bi-telephone-fill"></i><span>+91 11 2345 6789</span></div>
+            <div class="contact-item"><i class="bi bi-envelope-fill"></i><span>info@springflowers.edu.in</span></div>
+            <div class="contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 7:30 AM – 3:00 PM</span></div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="contact-card p-4">
+            <h6 class="mb-3 fw-bold" style="color:var(--brown)">Send a Message</h6>
+            <div class="mb-3"><input type="text" class="form-control sfa-input" placeholder="Your Name"/></div>
+            <div class="mb-3"><input type="email" class="form-control sfa-input" placeholder="Email Address"/></div>
+            <div class="mb-3"><textarea class="form-control sfa-input" rows="3" placeholder="Your message..."></textarea></div>
+            <button class="btn sfa-btn-primary w-100">Send Message <i class="bi bi-send ms-1"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn sfa-btn-outline" onclick="showPage('welcome')"><i class="bi bi-arrow-left me-1"></i>Back to Home</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="sfa-footer">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+      <span>🌸 <strong>Spring Flowers Academy</strong> — Nurturing Futures Since 1999</span>
+      <span class="footer-copy">© 2024 All Rights Reserved</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
