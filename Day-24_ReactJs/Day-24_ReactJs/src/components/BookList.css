@@ -1,0 +1,236 @@
+/* ========================================
+   BookList Component Styles
+   ======================================== */
+
+.book-list-section {
+  padding: 0 0 60px;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* ── Header ── */
+.book-list__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.book-list__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.book-list__label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.book-list__title {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+/* ── Controls ── */
+.book-list__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Search ── */
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.search-input {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 9px 36px 9px 36px;
+  width: 280px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+}
+
+.search-clear {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: color var(--transition);
+  line-height: 1;
+}
+
+.search-clear:hover {
+  color: var(--text-primary);
+}
+
+/* ── View Toggle ── */
+.view-toggle {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.view-toggle__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  border-right: 1px solid var(--border);
+}
+
+.view-toggle__btn:last-child {
+  border-right: none;
+}
+
+.view-toggle__btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-secondary);
+}
+
+.view-toggle__btn.active {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+}
+
+.view-toggle__btn.active svg {
+  fill: var(--bg-primary);
+}
+
+/* ── Meta ── */
+.book-list__meta {
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+}
+
+.book-list__count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Grid Layout ── */
+.book-list__grid--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* ── List Layout ── */
+.book-list__grid--list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.book-list__item {
+  animation: fadeUp 0.4s ease both;
+}
+
+/* ── Empty State ── */
+.book-list__empty {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.book-list__empty-icon {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.book-list__empty p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.book-list__empty-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.book-list__empty-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .book-list__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    min-width: 200px;
+  }
+
+  .book-list__controls {
+    width: 100%;
+  }
+
+  .book-list__grid--grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+}
