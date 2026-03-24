@@ -1,0 +1,4 @@
+This is the content from input.txt.
+It will be read using Promises (Challenge 8) and async/await (Challenge 9).
+Asynchronous chaining makes Node.js powerful and efficient.
+Learning Node.js is fun!

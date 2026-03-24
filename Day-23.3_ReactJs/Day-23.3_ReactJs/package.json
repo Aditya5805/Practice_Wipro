@@ -1,0 +1,15 @@
+{
+  "name": "day-23-async-node",
+  "version": "1.0.0",
+  "description": "Day 23.3 — Asynchronous Programming in Node.js: Callbacks, Promises, and Async/Await",
+  "main": "async-await.js",
+  "scripts": {
+    "callback":    "node callbacks.js",
+    "promise":     "node promises.js",
+    "async":       "node async-await.js",
+    "start":       "node async-await.js"
+  },
+  "keywords": ["nodejs", "async", "callbacks", "promises", "async-await", "fs"],
+  "author": "Day-23.3 Assignment",
+  "license": "ISC"
+}

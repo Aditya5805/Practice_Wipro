@@ -1,0 +1,4 @@
+Hello from data.txt!
+This file is read using the Node.js fs module with a callback function.
+Asynchronous programming allows non-blocking I/O operations.
+Node.js is awesome!
